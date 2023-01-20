@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto University</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./images/photo_2023-01-18_23-05-44-removebg-preview.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.47.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="particles-js"></div> <!-- stats - count particles -->
+    
+    <main class="container mx-auto">
+        <div class="">
+            <div class="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+                <div class="relative flex items-center justify-between">
+                    <a href="/" aria-label="Company" title="Company" class="inline-flex items-center">
+                        <img src="./images/photo_2023-01-18_23-05-44-removebg-preview.png" class="w-20"/>
+                        <span class="ml-2 text-xl font-bold tracking-wide text-gray-100 uppercase">Crypto University</span>
+                    </a>
+                    <ul class="flex items-center hidden space-x-8 lg:flex">
+                        <li><a href="/" aria-label="Our product" title="Our product"
+                                class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400 hover:text-yellow-400">About</a>
+                        </li>
+                        <li><a href="/" aria-label="Our product" title="Our product"
+                                class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400 hover:text-yellow-400">Tokenomics</a>
+                        </li>
+                        <li><a href="/" aria-label="Product pricing" title="Product pricing"
+                                class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400 hover:text-yellow-400">Roadmap</a>
+                        </li>
+                        <li><a href="/" aria-label="About us" title="About us"
+                                class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400 hover:text-yellow-400">How to buy
+                                </a></li>
+                    </ul>
+                    
+                    <!-- Mobile menu -->
+                    <div class="lg:hidden">
+                        <button aria-label="Open Menu" title="Open Menu"
+                            class="p-2 -mr-1 transition duration-200 rounded focus:outline-none focus:shadow-outline">
+                            <svg class="w-5 text-gray-600" viewBox="0 0 24 24">
+                                <path fill="currentColor"
+                                    d="M23,13H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,13,23,13z"></path>
+                                <path fill="currentColor" d="M23,6H1C0.4,6,0,5.6,0,5s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,6,23,6z">
+                                </path>
+                                <path fill="currentColor"
+                                    d="M23,20H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,20,23,20z"></path>
+                            </svg>
+                        </button>
+                        <!-- Mobile menu dropdown 
+                <div class="absolute top-0 left-0 w-full">
+                  <div class="p-5 bg-white border rounded shadow-sm">
+                    <div class="flex items-center justify-between mb-4">
+                      <div>
+                        <a href="/" aria-label="Company" title="Company" class="inline-flex items-center">
+                          <svg class="w-8 text-deep-purple-accent-400" viewBox="0 0 24 24" stroke-linejoin="round" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" stroke="currentColor" fill="none">
+                            <rect x="3" y="1" width="7" height="12"></rect>
+                            <rect x="3" y="17" width="7" height="6"></rect>
+                            <rect x="14" y="1" width="7" height="6"></rect>
+                            <rect x="14" y="11" width="7" height="12"></rect>
+                          </svg>
+                          <span class="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">Company</span>
+                        </a>
+                      </div>
+                      <div>
+                        <button aria-label="Close Menu" title="Close Menu" class="p-2 -mt-2 -mr-2 transition duration-200 rounded hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
+                          <svg class="w-5 text-gray-600" viewBox="0 0 24 24">
+                            <path
+                              fill="currentColor"
+                              d="M19.7,4.3c-0.4-0.4-1-0.4-1.4,0L12,10.6L5.7,4.3c-0.4-0.4-1-0.4-1.4,0s-0.4,1,0,1.4l6.3,6.3l-6.3,6.3 c-0.4,0.4-0.4,1,0,1.4C4.5,19.9,4.7,20,5,20s0.5-0.1,0.7-0.3l6.3-6.3l6.3,6.3c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3 c0.4-0.4,0.4-1,0-1.4L13.4,12l6.3-6.3C20.1,5.3,20.1,4.7,19.7,4.3z"
+                            ></path>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                    <nav>
+                      <ul class="space-y-4">
+                        <li><a href="/" aria-label="Our product" title="Our product" class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400">Product</a></li>
+                        <li><a href="/" aria-label="Our product" title="Our product" class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400">Features</a></li>
+                        <li><a href="/" aria-label="Product pricing" title="Product pricing" class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400">Pricing</a></li>
+                        <li><a href="/" aria-label="About us" title="About us" class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400">About us</a></li>
+                        <li>
+                          <a
+                            href="/"
+                            class="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                            aria-label="Sign up"
+                            title="Sign up"
+                          >
+                            Sign up
+                          </a>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+                -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero">
+            <div class="hero-content flex-col lg:flex-row">
+                <div class="text-center lg:text-left">
+                    <h1 class="text-5xl font-bold">$CU</h1>
+                    <p class="py-6">Welcome Everyone to Crypto University ( $CU ). We will be Fair Launching Saturday at 10:30 am UTC (you can check the VC
+                    timer). Launch will be fair for everyone, no pre pump nor any of that stuff, we always keep it clean over here and
+                    transparent, this is why the contract and chart is already public for everyone, and we will be going live as soon as VC
+                    Timer starts, we will be keeping you guys posted, this is when liquidity will be added and trading will start (this
+                    Saturday 10:30am UTC)
+                    
+                    If you have any questions feel free to ask, chat will be open until 30 minutes before launch, you can also do your
+                    research regarding the concept and the theme of this coin wich will all be shared with you guys really soon.
+                    
+                    We are changing the space over here, we don’t play around, we will be reaching milestones that has never been seen
+                    before.
+                    
+                    Join us on our Journey…</p>
+                    <a href="#_" class="relative inline-block text-lg group">
+                        <span
+                            class="relative z-10 block px-5 py-3 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
+                            <span class="absolute inset-0 w-full h-full px-5 py-3 rounded-lg bg-gray-50"></span>
+                            <span
+                                class="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-900 group-hover:-rotate-180 ease"></span>
+                            <span class="relative">Buy Now</span>
+                        </span>
+                        <span
+                            class="absolute bottom-0 right-0 w-full h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0"
+                            data-rounded="rounded-lg"></span>
+                    </a>
+                    <a href="#_" class="relative inline-block text-lg group">
+                        <span
+                            class="relative z-10 block px-5 py-3 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
+                            <span class="absolute inset-0 w-full h-full px-5 py-3 rounded-lg bg-gray-50"></span>
+                            <span
+                                class="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-900 group-hover:-rotate-180 ease"></span>
+                            <span class="relative">Chart</span>
+                        </span>
+                        <span
+                            class="absolute bottom-0 right-0 w-full h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0"
+                            data-rounded="rounded-lg"></span>
+                    </a>
+                </div>
+                <img src="./images/photo_2023-01-18_23-05-44-removebg-preview.png" alt="">
+            </div>
+        </div>
+        <section class="p-6">
+            <div class="container p-4 mx-auto text-center flex flex-col md:flex-row justify-center gap-4 items-center">
+                <img src="./images/photo_2023-01-18_23-05-44.jpg" class="w-16 rounded-full" alt="">
+                <div>
+                    <h4 class="text-3xl font-bold">Contract Address</h4>
+                    <p>0x9f33c13db079e94caa0937d3fe3a1081a56c2fcd</p>
+                </div>
+            </div>
+            <div class="container flex flex-wrap justify-evenly mt-12 mx-auto dark:text-gray-400">
+                <div class="">
+                    <img src="./images/coinmarketcap-icon.png" class="w-20 mx-auto" alt="">
+                </div>
+                <div class="">
+                    <img src="./images//dextools.svg" class="w-16 mx-auto" alt="">
+                </div>
+                <div class="">
+                    <img src="./images/poocoin-poocoin-logo.png" class="w-20 mx-auto" alt="">
+                </div>
+                <div class="">
+                    <img src="./images/bunny-color.png" class="w-20 mx-auto" alt="">
+                </div>
+                
+               
+            </div>
+            <div class="flex justify-center items-center gap-4 my-6">
+                <h2 class="text-amber-300 text-2xl font-medium">Socials </h2>
+                
+                <img src="./images/telegram-logo-944.png" class="w-10" alt="">
+                <img src="./images/logo-twitter-png-5860.png" class="w-10" alt="">
+            </div>
+        </section>
+        <div class="w-full"
+            style="background-image: url('./images/bg.jpg'); background-position: center center; background-blend-mode: multiply; background-size: cover;">
+            <div class="container flex flex-col flex-wrap content-center justify-center p-4 py-20 mx-auto md:p-10">
+                <h1 class="text-5xl antialiased font-semibold leading-none text-center dark:text-gray-100">join us on our journey!</h1>
+                <p class="pt-2 pb-8 text-xl antialiased text-center text-amber-300">We are here to teach you how to make money in the cryptocurrency space and different skills, tips, and tricks to make
+                crypto your full time career.</p>
+                
+            </div>
+        </div>
+        <section class="mt-16">
+            <img src="./images/ezgif.com-gif-maker.gif" alt="" class="w-full lg:w-1/2 mx-auto">
+            <p class="text-xl text-white text-center hover:text-amber-300 font-medium max-w-xl my-5 mx-auto">$CU fair launched today!
+            HAS HUGE POTENTIAL, MASSIVE TEAM! DECENT BUDGET!
+            LOTS OF MARKETING!
+            CZ IS LIKELY TO TWEET THIS TOKEN!</p>
+        </section>
+        <div class="py-6 sm:py-8 lg:py-12">
+            <div class="max-w-screen-xl px-4 md:px-8 mx-auto">
+                <h2 class="text-amber-300 text-3xl font-bold text-center mb-4 md:mb-8 xl:mb-12">Tokenomics</h2>
+        <p class="text-center hover:text-amber-300">Total Supply: 1,000,000</p>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-2 gap-6 lg:gap-8 mb-6 md:mb-8">
+                    <!-- plan - start -->
+                    <div class="flex flex-col border rounded-lg overflow-hidden sm:mt-8">
+                        <div class="h-2 bg-pink-500"></div>
+        
+                        <div class="flex flex-col justify-center items-center flex-1 p-6 pt-8">
+                            <div class="mb-12">
+                                <div class="text-amber-300 text-2xl font-bold text-center mb-5">Buy taxes</div>
+        
+                                
+        
+                                <div class="space-y-4">
+                                    <!-- check - start -->
+                                    <div class="flex items-center gap-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 shrink-0" fill="none"
+                                            viewBox="0 0 16 16">
+                                            <circle cx="8" cy="8" r="8" fill="currentColor" class="text-amber-300" />
+                                            <circle cx="8" cy="8" r="3" fill="currentColor" class="text-amber-300" />
+                                        </svg>
+        
+                                        <span class="text-amber-300">7% Marketing</span>
+                                    </div>
+                                    <!-- check - end -->
+        
+                                    <!-- check - start -->
+                                    <div class="flex items-center gap-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 shrink-0" fill="none"
+                                            viewBox="0 0 16 16">
+                                            <circle cx="8" cy="8" r="8" fill="currentColor" class="text-amber-300" />
+                                            <circle cx="8" cy="8" r="3" fill="currentColor" class="text-amber-300" />
+                                        </svg>
+        
+                                        <span class="text-amber-300">2% liquidity</span>
+                                    </div>
+                                    <!-- check - end -->
+        
+                                    <!-- check - start -->
+                                    <div class="flex items-center gap-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 shrink-0" fill="none"
+                                            viewBox="0 0 16 16">
+                                            <circle cx="8" cy="8" r="8" fill="currentColor" class="text-amber-300" />
+                                            <circle cx="8" cy="8" r="3" fill="currentColor" class="text-amber-300" />
+                                        </svg>
+        
+                                        <span class="text-amber-300">1% Dev</span>
+                                    </div>
+                                    <!-- check - end -->
+        
+                                    
+                                   
+                                </div>
+                            </div>
+        
+                            
+                        </div>
+                    </div>
+                    <!-- plan - end -->
+        
+                   
+        
+                    <!-- plan - start -->
+                <div class="flex flex-col border rounded-lg overflow-hidden sm:mt-8">
+                    <div class="h-2 bg-amber-500"></div>
+                
+                    <div class="flex flex-col justify-center items-center flex-1 p-6 pt-8">
+                        <div class="mb-12">
+                            <div class="text-amber-300 text-2xl font-bold text-center mb-5">Sell taxes</div>
+                
+                
+                
+                            <div class="space-y-4">
+                                <!-- check - start -->
+                                <div class="flex items-center gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 shrink-0" fill="none" viewBox="0 0 16 16">
+                                        <circle cx="8" cy="8" r="8" fill="currentColor" class="text-amber-300" />
+                                        <circle cx="8" cy="8" r="3" fill="currentColor" class="text-amber-300" />
+                                    </svg>
+                
+                                    <span class="text-amber-300">7% Marketing</span>
+                                </div>
+                                <!-- check - end -->
+                
+                                <!-- check - start -->
+                                <div class="flex items-center gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 shrink-0" fill="none" viewBox="0 0 16 16">
+                                        <circle cx="8" cy="8" r="8" fill="currentColor" class="text-amber-300" />
+                                        <circle cx="8" cy="8" r="3" fill="currentColor" class="text-amber-300" />
+                                    </svg>
+                
+                                    <span class="text-amber-300">2% liquidity</span>
+                                </div>
+                                <!-- check - end -->
+                
+                                <!-- check - start -->
+                                <div class="flex items-center gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 shrink-0" fill="none" viewBox="0 0 16 16">
+                                        <circle cx="8" cy="8" r="8" fill="currentColor" class="text-amber-300" />
+                                        <circle cx="8" cy="8" r="3" fill="currentColor" class="text-amber-300" />
+                                    </svg>
+                
+                                    <span class="text-amber-300">1% Dev</span>
+                                </div>
+                                <!-- check - end -->
+                
+                
+                
+                            </div>
+                        </div>
+                
+                
+                    </div>
+                </div>
+                    <!-- plan - end -->
+                </div>
+            </div>
+        </div>
+        <div class="" >
+            <div class="mt-16 text-center container mx-auto mb-32 ">
+                <h1 class="text-5xl text-amber-300 font-bold mb-2">
+                    Road <span class="text-amber-300">Map</span>
+                </h1>
+        
+                
+                <section class="max-w-5xl text-left mx-auto py-10">
+                    <div>
+                        <div class="flex flex-row">
+                            <div class="hidden md:flex flex-col items-center">
+                                <div
+                                    class="w-32 py-5 border border-gray-300 rounded mr-4 uppercase flex flex-col items-center justify-center">
+                                    <div class="text-3xl font-black text-amber-300">Q1</div>
+                                </div>
+                                <div class="h-full border-l-4 border-transparent">
+                                    <div class="border-l-4 mr-4 h-full border-amber-300 border-dashed"></div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col md:flex-row  border rounded p-5 border-amber-300">
+                                <div class="flex md:flex-row flex-col items-center">
+                                    <div class="flex-auto">
+                                        <div class="p-3 text-xl text-amber-300 font-light">
+                                            Fair Token Launch
+                                        </div>
+                                        <div class="p-3 text-xl text-amber-300 font-light">Marketing Campaign</div>
+                                        <div class="p-3 text-xl text-amber-300 font-light">
+                                            Website Launch
+                                        </div>
+                                        <div class="p-3 text-xl text-amber-300 font-light">
+                                            CoinMarketCap Listing
+                                        </div>
+                                        <div class="p-3 text-xl text-amber-300 font-light">
+                                            Coingecko Listing
+                                        </div>
+                                        <div class="p-3 text-xl text-amber-300 font-light">
+                                            5000 Holders
+                                        </div>
+                                    </div>
+                                </div>
+                                <img src={step1} alt="" className="w-56" />
+                            </div>
+                        </div>
+                        <div class="flex items-start flex-row">
+                            <div class="border-t-4 border-r-4 border-transparent">
+                                <div
+                                    class="w-16 ml-16 h-16 border-l-4 border-amber-300 border-dashed border-b-4 rounded-bl-full">
+                                </div>
+                            </div>
+                            <div class="border-t-4 border-transparent flex-auto">
+                                <div class="h-16 border-b-4 border-gray-300 border-dashed"></div>
+                            </div>
+                            <div
+                                class="w-16 mt-16 mr-16 h-16 border-r-4 border-gray-300 border-dashed border-t-4 rounded-tr-full">
+                            </div>
+                        </div>
+                        <div class="flex flex-row-reverse">
+                            <div class="hidden md:flex flex-col items-center">
+                                <div
+                                    class="w-32 py-5 border border-gray-300 rounded ml-4 uppercase flex flex-col items-center justify-center">
+                                    <div class="text-3xl font-black text-amber-300">Q2</div>
+                                </div>
+                                <div class="h-full border-r-4 border-transparent">
+                                    <div class="border-l-4 ml-4 h-full border-amber-300 border-dashed"></div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col md:flex-row p-5 border rounded  border-gray-300">
+                                <img src={step2} className="w-56" alt="" />
+                                <div class="flex md:flex-row flex-col items-center">
+                                    <div class="flex-auto">
+                                        <div class="p-3 text-xl text-amber-300 font-light">
+                                            10,000 Telegram Members
+                                        </div>
+                                        <div class="p-3 text-xl text-amber-300 font-light">
+                                            Big Exchange Listings
+                                        </div>
+                                        <div class="p-3 text-xl text-amber-300 font-light">
+                                            Massive Six Figure Marketing Campaign
+                                        </div>
+                                        <div class="p-3 text-xl text-amber-300 font-light">
+                                            dApp
+                                        </div>
+                                        <div class="p-3 text-xl text-amber-300 font-light">
+                                            Massive Coin Burns
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-start flex-row-reverse">
+                            <div class="border-t-4 border-l-4 border-transparent">
+                                <div
+                                    class="w-16 mr-16 h-16 border-r-4 border-gray-300 border-dashed border-b-4 rounded-br-full">
+                                </div>
+                            </div>
+                            <div class="border-t-4 border-transparent flex-auto">
+                                <div class="h-16 border-b-4 border-gray-300 border-dashed"></div>
+                            </div>
+                            <div
+                                class="w-16 mt-16 ml-16 h-16 border-l-4 border-amber-300 border-dashed border-t-4 rounded-tl-full">
+                            </div>
+                        </div>
+                        <div class="flex flex-row">
+                            <div class="hidden md:flex flex-col items-center">
+                                <div
+                                    class="w-32 py-5 border border-gray-300 rounded mr-4 uppercase flex flex-col items-center justify-center">
+                                    <div class="text-3xl font-black text-amber-300">Q3</div>
+                                </div>
+                                <div class="h-full border-l-4 border-transparent">
+                                    <div class="border-l-4 mr-4 h-full border-gray-300 border-dashed"></div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col md:flex-row p-5 border rounded  border-gray-300">
+                                <div class="flex md:flex-row flex-col items-center">
+                                    <div class="flex-auto">
+                                        <div class="p-3 text-xl text-amber-300 font-light">
+                                            BMW Car Giveaway
+                                        </div>
+                                        <div class="p-3 text-xl text-amber-300 font-light">
+                                            Top 10 Exchange Listings
+                                        </div>
+                                        <div class="p-3 text-xl text-amber-300 font-light">
+                                            Play To Earn Racing Game (Mobile And Computer)
+                                        </div>
+                                        <div class="p-3 text-xl text-amber-300 font-light">
+                                            Metaverse with NFT Avatars
+                                        </div>
+                                    </div>
+                                </div>
+                                <img src={step3} className="w-56" alt="" />
+                            </div>
+                        </div>
+                        
+                    </div>
+                </section>
+                <section class="">
+                    <div class="container max-w-xl p-6 py-12 mx-auto space-y-24 lg:px-8 lg:max-w-7xl">
+                        <div class="flex items-center flex-col gap-4">
+                            <div>
+                                <h2 class="text-3xl font-bold tracking-tight text-center sm:text-5xl text-amber-300">How to buy</h2>
+                                
+                            </div>
+                            <div aria-hidden="true" class="mt-10 lg:mt-0">
+                                <img src="./images/buy-gif.gif" alt="" class="mx-auto rounded-lg shadow-lg">
+                            </div>
+                        </div>
+                        <div class="grid lg:gap-8 lg:grid-cols-2 lg:items-center">
+                            <div>
+                                <h3 class="text-2xl font-bold tracking-tight sm:text-3xl dark:text-gray-50">Buy on PancakeSwap</h3>
+                                
+                                <div class="mt-12 space-y-12">
+                                    <div class="flex">
+                                        <div class="flex-shrink-0 text-left">
+                                            <div
+                                                class="flex items-center justify-center w-12 h-12 rounded-md dark:bg-violet-400 dark:text-gray-900">
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                    stroke="currentColor" class="w-7 h-7">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                        d="M5 13l4 4L19 7"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="ml-4 text-left">
+                                            <h4 class="text-lg font-medium leading-6 dark:text-gray-50">Step 1: Get some BNB (BSC)</h4>
+                                            <p class="mt-2 dark:text-gray-400">If You don't have some BNB (BSC) in your wallet you can buy and transfer BNB (BSC) directly from exchanges/wallets like
+                                            Binance, Crypto.com, TrustWallet or SafePal. You can also use a cross-chain swap like ChangeNow.io.</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex">
+                                        <div class="flex-shrink-0">
+                                            <div
+                                                class="flex items-center justify-center w-12 h-12 rounded-md dark:bg-violet-400 dark:text-gray-900">
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                    stroke="currentColor" class="w-7 h-7">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                        d="M5 13l4 4L19 7"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="ml-4 text-left">
+                                            <h4 class="text-lg font-medium leading-6 dark:text-gray-50">Step 2: Connect Wallet</h4>
+                                            <p class="mt-2 dark:text-gray-400">Connect your wallet to PancakeSwap by following these Instructions.
+                                            Import/Accept $BMWINU Token contract.
+                                            You may opt to download MetaMask mobile app or install the Desktop extension for Chrome or FireFox browser, and create
+                                            or import an existing wallet. Make sure to activate the BSC network if not already configured.</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex">
+                                        <div class="flex-shrink-0">
+                                            <div
+                                                class="flex items-center justify-center w-12 h-12 rounded-md dark:bg-violet-400 dark:text-gray-900">
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                    stroke="currentColor" class="w-7 h-7">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                        d="M5 13l4 4L19 7"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="ml-4 text-left">
+                                            <h4 class="text-lg font-medium leading-6 dark:text-gray-50">Step 3: Set Slippage and BNB (BSC)
+                                            </h4>
+                                            <p class="mt-2 dark:text-gray-400">In the Slippage field, enter a value starting at 9%. <br>
+                                             <span class="text-red-500">**Important Slippage Notice**</span> <br>
+                                            For the BNB field, enter the amount of BNB (BSC) you would like to swap.</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex">
+                                        <div class="flex-shrink-0">
+                                            <div class="flex items-center justify-center w-12 h-12 rounded-md dark:bg-violet-400 dark:text-gray-900">
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                                    class="w-7 h-7">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="ml-4 text-left">
+                                            <h4 class="text-lg font-medium leading-6 dark:text-gray-50">Step 4: Swap Tokens
+                                            </h4>
+                                            <p class="mt-2 dark:text-gray-400">Verify all fields to make sure everything is as desired and simply click the Swap button. Once completed, it may takes
+                                            few minutes for the $BMWINU token to display in your wallet.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div aria-hidden="true" class="mt-10 lg:mt-0">
+                                <img src="./images/bunny-color.png" alt=""
+                                    class="mx-auto rounded-lg shadow-lg w-96 mb-5">
+                                    <a href="#_" class="relative inline-block text-lg group">
+                                        <span
+                                            class="relative z-10 block px-5 py-3 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
+                                            <span class="absolute inset-0 w-full h-full px-5 py-3 rounded-lg bg-gray-50"></span>
+                                            <span
+                                                class="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-900 group-hover:-rotate-180 ease"></span>
+                                            <span class="relative">Buy now on PancakeSwap</span>
+                                        </span>
+                                        <span
+                                            class="absolute bottom-0 right-0 w-full h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0"
+                                            data-rounded="rounded-lg"></span>
+                                    </a>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="grid lg:gap-8 lg:grid-cols-2 lg:items-center">
+                                <div class="lg:col-start-2">
+                                    <h3 class="text-2xl font-bold tracking-tight sm:text-3xl dark:text-gray-50">Buy on PooCoin
+                                    </h3>
+                                    
+                                    <div class="mt-12 space-y-12">
+                                        <div class="flex">
+                                            <div class="flex-shrink-0 text-left">
+                                                <div class="flex items-center justify-center w-12 h-12 rounded-md dark:bg-violet-400 dark:text-gray-900">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                                        class="w-7 h-7">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="ml-4 text-left">
+                                                <h4 class="text-lg font-medium leading-6 dark:text-gray-50">Step 1: Get some BNB (BSC)</h4>
+                                                <p class="mt-2 dark:text-gray-400">If You don't have some BNB (BSC) in your wallet you can buy and transfer
+                                                    BNB (BSC) directly from exchanges/wallets like
+                                                    Binance, Crypto.com, TrustWallet or SafePal. You can also use a cross-chain swap like ChangeNow.io.</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex">
+                                            <div class="flex-shrink-0">
+                                                <div class="flex items-center justify-center w-12 h-12 rounded-md dark:bg-violet-400 dark:text-gray-900">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                                        class="w-7 h-7">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="ml-4 text-left">
+                                                <h4 class="text-lg font-medium leading-6 dark:text-gray-50">Step 2: Connect Wallet</h4>
+                                                <p class="mt-2 dark:text-gray-400">Connect your wallet to PancakeSwap by following these Instructions.
+                                                    Import/Accept $BMWINU Token contract.
+                                                    You may opt to download MetaMask mobile app or install the Desktop extension for Chrome or FireFox
+                                                    browser, and create
+                                                    or import an existing wallet. Make sure to activate the BSC network if not already configured.</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex">
+                                            <div class="flex-shrink-0">
+                                                <div class="flex items-center justify-center w-12 h-12 rounded-md dark:bg-violet-400 dark:text-gray-900">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                                        class="w-7 h-7">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="ml-4 text-left">
+                                                <h4 class="text-lg font-medium leading-6 dark:text-gray-50">Step 3: Set Slippage and BNB (BSC)
+                                                </h4>
+                                                <p class="mt-2 dark:text-gray-400">In the Slippage field, enter a value starting at 9%. <br>
+                                                    <span class="text-red-500">**Important Slippage Notice**</span> <br>
+                                                    For the BNB field, enter the amount of BNB (BSC) you would like to swap.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="flex">
+                                            <div class="flex-shrink-0">
+                                                <div class="flex items-center justify-center w-12 h-12 rounded-md dark:bg-violet-400 dark:text-gray-900">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                                        class="w-7 h-7">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="ml-4 text-left">
+                                                <h4 class="text-lg font-medium leading-6 dark:text-gray-50">Step 4: Swap Tokens
+                                                </h4>
+                                                <p class="mt-2 dark:text-gray-400">Verify all fields to make sure everything is as desired and simply click
+                                                    the Swap button. Once completed, it may takes
+                                                    few minutes for the $BMWINU token to display in your wallet.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mt-10 lg:mt-0 lg:col-start-1 lg:row-start-1">
+                                    <img src="./images/poocoin-poocoin-logo.png" alt=""
+                                        class="mx-auto rounded-lg shadow-lg w-96">
+                                        <a href="#_" class="relative inline-block text-lg group">
+                                            <span
+                                                class="relative z-10 block px-5 py-3 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
+                                                <span class="absolute inset-0 w-full h-full px-5 py-3 rounded-lg bg-gray-50"></span>
+                                                <span
+                                                    class="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-900 group-hover:-rotate-180 ease"></span>
+                                                <span class="relative">Buy Now</span>
+                                            </span>
+                                            <span
+                                                class="absolute bottom-0 right-0 w-full h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0"
+                                                data-rounded="rounded-lg"></span>
+                                        </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <img src="./images/photo_2023-01-18_23-05-44-removebg-preview.png" class="w-full lg:w-1/2 mx-auto" alt="">
+                <a href="/" aria-label="Company" title="Company" class="inline-flex items-center">
+                    <img src="./images/photo_2023-01-18_23-05-44-removebg-preview.png" class="w-20" />
+                    <span class="ml-2 text-xl font-bold tracking-wide text-gray-100 uppercase">Crypto University</span>
+                </a>
+                <div class="flex justify-center items-center gap-4 my-6">
+                
+                    <img src="./images/telegram-logo-944.png" class="w-10" alt="">
+                    <img src="./images/logo-twitter-png-5860.png" class="w-10" alt="">
+                </div>
+                <p>© Copyright Crypto University | All rights reserved 2022</p>
+            </div>
+        </div>
+    </main>
+    <!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> <!-- stats.js lib -->
+    <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>
